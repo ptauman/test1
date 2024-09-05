@@ -250,7 +250,7 @@ let militaryUnit = {
   
       location: "Middle East",
   
-      mission: "Counter-terrorism operations",
+      mission: "=-terrorism operations",
   
       startDate: "2024-01-01",
   
@@ -278,9 +278,12 @@ function Mission2(unit)
 
 
 function Mission3(unit, newDeployment2) {
-    const currentDeployment2 =unit.currentDeployment;
+    const hd = {
+      eventDate :unit. currentDeployment.startDate,
+      eventDescription : unit. currentDeployment.mission
+    };
+    unit.history.push(hd);
     unit. currentDeployment = newDeployment2;
-    unit. history.push(currentDeployment2);
     return unit;
 }
 function Mission4(unit, newvehicl)
